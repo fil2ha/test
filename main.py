@@ -40,23 +40,21 @@ data = [
  {'name': 'James Wallace', 'product': 63, 'price': 24982, 'category': 'Веб'}
 ]
 
-
-
-customer_categories = {}
-for entry in data:
-    name = entry['name']
-    category = entry['category']
-    if name in customer_categories:
-        customer_categories[name].add(category)
+result = {}
+for value in data:
+    name = value['name']
+    category = value['category']
+    if name in result:
+        result[name].add(category)
     else:
-        customer_categories[name] = {category}
+        result[name] = {category}
 
 
-for name, categories in customer_categories.items():
+for name, categories in result.items():
     if len(categories) > 2:
-        print(f"Заказчик {name} требует разработку продуктов в категориях {categories}.")
+        print(f"{name} требует разработку продуктов в категориях: {categories}.")
 
 
 # вывод
-# Заказчик James Wallace требует разработку продуктов в категориях {'Веб', 'консоль', 'сервер', 'сайт', 'моб'}.
-# Заказчик Keith Brown требует разработку продуктов в категориях {'моб', 'оконное', 'консоль'}.
+# James Wallace требует разработку продуктов в категориях {'Веб', 'консоль', 'сервер', 'сайт', 'моб'}.
+# Keith Brown требует разработку продуктов в категориях {'моб', 'оконное', 'консоль'}.
