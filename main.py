@@ -55,3 +55,8 @@ for entry in data:
 for name, categories in customer_categories.items():
     if len(categories) > 2:
         print(f"Заказчик {name} требует разработку продуктов в категориях {categories}.")
+
+
+# вывод
+# Заказчик James Wallace требует разработку продуктов в категориях {'Веб', 'консоль', 'сервер', 'сайт', 'моб'}.
+# Заказчик Keith Brown требует разработку продуктов в категориях {'моб', 'оконное', 'консоль'}.
